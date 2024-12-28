@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 200px;
+    margin-right: 1rem;
+}
+
+.form-group input {
+    padding: 0.5rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.unit {
+    margin-left: 0.5rem;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 1rem 0;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+#result {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.result-item {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    position: relative;
+}
+
+.result-item span:last-child {
+    min-width: 120px;
+    text-align: right;
+    margin-right: 25px;
+}
+
+.result-item::after {
+    content: '円';
+    position: absolute;
+    right: -25px;
+    width: 20px;
+}
+
+.result-item .unit {
+    margin-left: 0.5rem;
+}
+
+.total {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #333;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.insurance-rates {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.insurance-rates h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+select {
+    padding: 0.5rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.form-group input[type="number"] {
+    padding: 0.5rem;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="number"][step] {
+    width: 100px;
+}
+
+p {
+    line-height: 1.8;
+}
+
+.calculation-process {
+    margin: 2rem 0;
+}
+
+.secondary-button {
+    background-color: #666;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: #777;
+}
+
+.process-item {
+    margin: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    position: relative;
+}
+
+.process-item span:last-child {
+    min-width: 120px;
+    text-align: right;
+    margin-right: 25px;
+}
+
+.process-item::after {
+    content: '円';
+    position: absolute;
+    right: -25px;
+    width: 20px;
+}
+
+#processDetails {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#processDetails h4 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.radio-group {
+    margin: 10px 0;
+}
+
+.income-type {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.income-type select,
+.income-type input {
+    padding: 5px;
+}
+
+.remove-income {
+    padding: 5px 10px;
+}
+
+#addIncomeType {
+    margin-top: 10px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-row label {
+    width: 120px;
+    margin-right: 10px;
+}
+
+#otherIncomeFields p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.deduction-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.deduction-group {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+.deduction-group h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.dependent-counts {
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.input-row label {
+    min-width: 200px;
+    margin-right: 10px;
+}
+
+.input-row input {
+    width: 150px;
+    padding: 5px;
+}
+
+.radio-group {
+    margin: 10px 0;
+}
+
+.radio-group label {
+    margin-right: 20px;
+}
+
+.income-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.total-income {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.total-income label {
+    font-weight: bold;
+}
+
+.total-income span {
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+.error-message {
+    color: #d32f2f;
+    background-color: #ffebee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ffcdd2;
+    display: none;
+}
+
+.result-section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.result-section h4 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.result-table tr {
+    border-bottom: 1px solid #eee;
+}
+
+.result-table tr:last-child {
+    border-bottom: none;
+}
+
+.result-table td {
+    padding: 8px;
+}
+
+.result-table td:first-child {
+    width: 60%;
+}
+
+.result-table td:last-child {
+    text-align: right;
+    font-family: monospace;
+}
+
+.result-table tr.total {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.result-table tr.total td {
+    border-top: 2px solid #ddd;
+} 
